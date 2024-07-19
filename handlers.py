@@ -159,11 +159,14 @@ async def get_result(
                                  negative_prompt=user_data.get('negative_prompt'),
                                  style=user_data.get('style', 'DEFAULT'),
                                  ratio=user_data.get('ratio', (1024, 1024)))
-        
-        img = FSInputFile(path=f'images/image{image_number}.jpg')
-
-        await call.message.answer_photo(photo=img)
-
-        os.remove(f'images/image{image_number}.jpg')
-
-        await state.clear()
+        if image_number == -1:
+            await call.message.answer(text="An error occurred while generating")
+            
+        else:
+            img = FSInputFile(path=f'images/image{image_number}.jpg')
+    
+            await call.message.answer_photo(photo=img)
+    
+            os.remove(f'images/image{image_number}.jpg')
+    
+            await state.clear()
