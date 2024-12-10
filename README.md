@@ -1,8 +1,6 @@
 # FusionBrainBot
 
 ![Static Badge](https://img.shields.io/badge/G00seByt3-FusionBrainBot-FusionBrainBot)
-![GitHub top language](https://img.shields.io/github/languages/top/G00seByt3/FusionBrainBot)
-![GitHub](https://img.shields.io/github/license/G00seByt3/FusionBrainBot)
 
 ## Installation (Windows)
 
